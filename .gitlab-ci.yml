@@ -1,0 +1,10 @@
+before_script:
+ - apt-get update -qq
+
+upload:
+ stage: deploy
+ script:
+  - apt-get install lftp -y
+  - lftp -c "set ftp:ssl-allow no; open -u baimkumis@alif-uin.com,ftpbaim12345 ftp.alif-uin.com; mirror -Rnev ./ ./htdocs --ignore-time --parallel=10 --exclude-glob .env* --exclude .git/"
+ only:
+  - main

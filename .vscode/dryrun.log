@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/zakcrust/baim-kumis-new/baim-kumis'
+make: Leaving directory '/home/zakcrust/baim-kumis-new/baim-kumis'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 
