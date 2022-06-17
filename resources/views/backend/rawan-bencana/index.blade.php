@@ -25,8 +25,10 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-md-8">
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
                     <div id="map" class="map-js-height"></div>
@@ -64,41 +66,41 @@
                         </div>
                         <div class="card-body">
                             <canvas id="bentukBangunanChart"></canvas>
-        
+                            
                             <ul class="p-t-30 list-unstyled">
                                 <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-blue"></i></span>Gunung Meletus<span
-                                        class="float-right">{{$tipebencanas[0]}}</span></li>
+                                class="float-right">{{$tipebencanas[0]}}</span></li>
                                 <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-green"></i></span>Tsunami<span
                                         class="float-right">{{$tipebencanas[1]}}</span></li>
-                                <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-orange"></i></span>Longsor<span
+                                        <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-orange"></i></span>Longsor<span
                                         class="float-right">{{$tipebencanas[2]}}</span></li>
-                                <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-red"></i></span>Banjir<span
+                                        <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-red"></i></span>Banjir<span
                                         class="float-right">{{$tipebencanas[3]}}</span></li>
-                                <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-yellow"></i></span>Puting Beliung<span
+                                        <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-yellow"></i></span>Puting Beliung<span
                                         class="float-right">{{$tipebencanas[4]}}</span></li>
-                            </ul>
+                                    </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        
         <div class="col-md-12">
            <div class="row">
                <div class="col-12 mb-2">
                    <a href="{{ route('backend.rawanBencana.add') }}" class="btn btn-primary">Tambah</a>
-               </div>
+                </div>
                <div class="col-12 mb-2">
                    <div class="card">
                        <div class="card-body">
                            <p>Daftar Kawasan Rawan Bencana</p>
-
+                           
                            <div class="table-responsive">
                                <table class="table table-striped" id="table-data">
                                    <thead>
-                                   <tr>
-                                       <th class="text-center">
-                                           #
+                                       <tr>
+                                           <th class="text-center">
+                                               #
                                        </th>
                                        <th>Foto Kawasan Rawan</th>
                                        <th>Nama Area</th>
@@ -108,22 +110,24 @@
                                        <th></th>
                                    </tr>
                                    </thead>
-                               </table>
+                                </table>
                            </div>
-                       </div>
+                        </div>
                    </div>
                </div>
 
-           </div>
+            </div>
         </div>
     </div>
+</div>
+</div>
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/backend/bencana/index.js') }}"></script>
-    <script src="{{ asset('assets/bundles/sweetalert/sweetalert.min.js') }}"></script>
-    <script src="{{ asset('assets/bundles/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
-    <script src="{{ asset('assets/bundles/datatables/datatables.min.js') }}"></script>
+<script src="{{ asset('js/backend/bencana/index.js') }}"></script>
+<script src="{{ asset('assets/bundles/sweetalert/sweetalert.min.js') }}"></script>
+<script src="{{ asset('assets/bundles/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
+<script src="{{ asset('assets/bundles/datatables/datatables.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/chartjs/chart.min.js') }}"></script>
     <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>

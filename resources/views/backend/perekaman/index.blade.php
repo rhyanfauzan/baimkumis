@@ -85,9 +85,11 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <div class="col-md-8 mb-5">
-        <div id="map" class="map-js-height"></div>
+<div class="page-wrapper">
+    <div class="page-content">    
+        <div class="row">
+            <div class="col-md-8 mb-5">
+                <div id="map" class="map-js-height"></div>
         <div id="popup" class="ol-popup">
             <a href="#" id="popup-closer" class="ol-popup-closer"></a>
             <div id="popup-content"></div>
@@ -100,7 +102,7 @@
             </div>
             <div class="card-body">
                 <canvas id="bentukBangunanChart"></canvas>
-
+                
                 <ul class="p-t-30 list-unstyled">
                     <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-blue"></i></span>DPRKPLH<span class="float-right">{{$usulans[0]}}</span></li>
                     <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-green"></i></span>Dinsos<span class="float-right">{{$usulans[1]}}</span></li>
@@ -110,7 +112,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="col-12">
         <div class="row">
             <div class="col-12 mb-2">
@@ -148,12 +150,12 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="col-12 mb-2" id="tb-resp2">
                 <div class="card">
                     <div class="card-body">
                         <p>Data Perekaman</p>
-
+                        
                         <div class="table-responsive">
                             <table class="table table-striped" id="table-data2">
                                 <thead>
@@ -197,9 +199,9 @@
                                         <td class="text-center">
                                             <div class="bade badge-danger">
                                                 Ditolak
-                                        </td>
-                                        @endif
-                                    </tr>
+                                            </td>
+                                            @endif
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -210,6 +212,8 @@
         </div>
     </div>
 
+</div>
+</div>
 </div>
 @endsection
 

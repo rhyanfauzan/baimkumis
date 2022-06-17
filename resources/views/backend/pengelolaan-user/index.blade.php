@@ -19,8 +19,10 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-12">
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     <h4>Pengelolaan User</h4>
@@ -43,20 +45,22 @@
                                         <th>Role</th>
                                         <th>Action</th>
                                     </tr>
-                                    </thead>
-                                </table>
+                                </thead>
+                            </table>
                             </div>
                         </div>
                     </div>
-
+                    
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('assets/bundles/sweetalert/sweetalert.min.js') }}"></script>
+<script src="{{ asset('assets/bundles/sweetalert/sweetalert.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/datatables/datatables.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js') }}"></script>
     <script>

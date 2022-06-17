@@ -25,8 +25,10 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <div class="col-md-8">
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-md-8">
         <div class="card">
             <div class="card-body">
                 <div id="map" class="map-js-height"></div>
@@ -77,7 +79,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
@@ -85,18 +87,18 @@
             </div>
             <div class="card-body">
                 <canvas id="donutChart"></canvas>
-
+                
                 <ul class="p-t-30 list-unstyled">
                     <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-blue"></i></span>SHM<span class="float-right">{{ $statusKepemilikans[0] }}</span></li>
                     <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-green"></i></span>Hak
                         Guna<span class="float-right">{{ $statusKepemilikans[1] }}</span></li>
                     <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-orange"></i></span>Akta Jual
                         Beli<span class="float-right">{{ $statusKepemilikans[2] }}</span></li>
-                </ul>
-            </div>
+                    </ul>
+                </div>
         </div>
     </div>
-
+    
 
     <!-- Table -->
     <div class="col-12">
@@ -115,7 +117,7 @@
                 <div class="card">
                     <div class="card-body">
                         <p>Daftar Hunian</p>
-
+                        
                         <div class="table-responsive">
                             <table class="table table-striped" id="table-data">
                                 <thead>
@@ -140,12 +142,14 @@
         </div>
     </div>
 </div>
+</div>
+</div>
 @endsection
 
 @section('scripts')
 
 <div class="modal" id="importExcel" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document">
                     <form method="post" action="{{ route('backend.hunian.import_excel') }}" enctype="multipart/form-data">
                         <div class="modal-content">
                             <div class="modal-header">

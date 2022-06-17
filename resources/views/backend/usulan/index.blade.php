@@ -85,8 +85,11 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <div class="col-md-8 mb-5">
+<div class="page-wrapper">
+    <div class="page-content">
+        
+        <div class="row">
+            <div class="col-md-8 mb-5">
         <div id="map" class="map-js-height"></div>
         <div id="popup" class="ol-popup">
             <a href="#" id="popup-closer" class="ol-popup-closer"></a>
@@ -100,7 +103,7 @@
             </div>
             <div class="card-body">
                 <canvas id="bentukBangunanChart"></canvas>
-
+                
                 <ul class="p-t-30 list-unstyled">
                     <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-blue"></i></span>DPRKPLH<span class="float-right">{{$usulans[0]}}</span></li>
                     <li class="padding-5"><span><i class="fa fa-circle m-r-5 col-green"></i></span>Dinsos<span class="float-right">{{$usulans[1]}}</span></li>
@@ -127,7 +130,7 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-
+            
             <a href="{{ route('backend.usulan.export_excel') }}" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
             <div class="col-12 mb-2" id="tb-resp">
                 <div class="card">
@@ -157,7 +160,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="col-12 mb-2" id="tb-resp2">
                 <div class="card">
                     <div class="card-body">
@@ -206,9 +209,9 @@
                                         <td class="text-center">
                                             <div class="bade badge-danger">
                                                 Ditolak
-                                        </td>
-                                        @endif
-                                    </tr>
+                                            </td>
+                                            @endif
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -218,22 +221,24 @@
             </div>
         </div>
     </div>
-
+    
+</div>
+</div>
 </div>
 @endsection
 
 @section('scripts')
 <div class="modal" id="importExcel" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <form method="post" action="{{ route('backend.usulan.import_excel') }}" enctype="multipart/form-data">
-                        <div class="modal-content">
-                            <div class="modal-header">
+    <div class="modal-dialog" role="document">
+        <form method="post" action="{{ route('backend.usulan.import_excel') }}" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>
                             </div>
                             <div class="modal-body">
-
+                                
                                 {{ csrf_field() }}
-
+                                
                                 <label>Pilih file excel</label>
                                 <div class="form-group">
                                     <input type="file" name="file" required="required">

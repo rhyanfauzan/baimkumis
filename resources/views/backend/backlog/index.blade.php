@@ -31,26 +31,28 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-12 text-right mb-2">
-            <a href="{{ route('backend.backlog.add') }}" class="btn btn-primary">Tambah</a>
-        </div>
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4>Backlog</h4>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <!-- <div class="col-md-12 mb-3">
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-12 text-right mb-2">
+                <a href="{{ route('backend.backlog.add') }}" class="btn btn-primary">Tambah</a>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Backlog</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- <div class="col-md-12 mb-3">
                             <a href="#" class="btn btn-success float-right">Tambah</a>
                         </div> -->
                         <div class="col-md-12">
                             <div class="table-responsive">
                                 <table class="table table-striped" id="table-data">
                                     <thead>
-                                    <tr>
-                                        <th class="text-center">
+                                        <tr>
+                                            <th class="text-center">
                                             #
                                         </th>
                                         <th>Nama Kecamatan</th>
@@ -78,26 +80,28 @@
                     </div>
 
                     
-
+                    
                 </div>
             </div>
             <div class="row justify-content-center">
-            <nav aria-label="...">
+                <nav aria-label="...">
             </nav>
             </div>
         </div>
     </div>
+</div>
+</div>
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('assets/bundles/sweetalert/sweetalert.min.js') }}"></script>
-    <script src="{{ asset('assets/bundles/datatables/datatables.min.js') }}"></script>
+<script src="{{ asset('assets/bundles/sweetalert/sweetalert.min.js') }}"></script>
+<script src="{{ asset('assets/bundles/datatables/datatables.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js') }}"></script>
     <script>
         const editUrl = '{{ route('backend.backlog.edit', ['id' => ':id']) }}'
         const deleteUrl = '{{ route('backend.backlog.delete', ['id' => ':id']) }}'
-          const tableData = $('#table-data').DataTable({
+        const tableData = $('#table-data').DataTable({
             "processing": true,
             "serverSide": true,
             'dom':
